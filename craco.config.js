@@ -74,11 +74,6 @@ webpackConfig.devServer = (devServerConfig) => {
       setupHealthEndpoints(devServer, healthPluginInstance);
     }
 
-    // App is hosted under /campus — redirect root to the correct entry URL in dev
-    devServer.app.get("/", (_req, res) => {
-      res.redirect(302, "/campus");
-    });
-
     return middlewares;
   };
 

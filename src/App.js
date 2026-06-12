@@ -5,7 +5,7 @@ import LandingPage from "@/views/pages/LandingPage";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="/campus">
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
         </Routes>
